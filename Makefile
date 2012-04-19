@@ -8,9 +8,11 @@ PYUIC = pyuic4
 
 RC_PY_FILE = resources.py
 
-all: $(RC_PY_FILE) imageexport_ui.py text_editor_ui.py
+all: quantumnik
 
-install: all
+quantumnik: $(RC_PY_FILE) imageexport_ui.py text_editor_ui.py
+
+install: quantumnik
 	mkdir -p $(INST_DIR)
 	cp *.py $(INST_DIR)/
 	cp *.png $(INST_DIR)/
@@ -28,3 +30,5 @@ imageexport_ui.py: imageexport.ui
 
 text_editor_ui.py: text_editor.ui
 	$(PYUIC) -o text_editor_ui.py text_editor.ui
+
+.PHONY: install clean
