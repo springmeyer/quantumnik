@@ -193,7 +193,7 @@ class Quantumnik(QObject):
             self.dock_window.textEdit.setText(xml + cmd)
 
     def helprun(self):
-        infoString = QString("Written by Dane Springmeyer\nhttp://bitbucket.org/springmeyer/quantumnik/")
+        infoString = QString("Written by Dane Springmeyer\nhttps://github.com/springmeyer/quantumnik")
         QMessageBox.information(self.iface.mainWindow(),"About %s" % NAME,infoString)
 
     def toggle(self):

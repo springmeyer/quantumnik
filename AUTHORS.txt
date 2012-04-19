@@ -1,12 +1,10 @@
 Authors
 -------
 
-Dane Springmeyer <dbsgeo - at - gmail.com>
+Dane Springmeyer <dane - at - dbsgeo.com>
 Aaron Racicot <aaronr - at - z-pulley.com>
 
-
-Testing and Patches
--------------------
+With help from:
 
 Alex Mandel
 Bob Moskovitz
@@ -14,12 +12,8 @@ Tim Sinnott
 Tim Sutton
 Ahmed Dassouki
 Tyler Mitchell
-
-
-Spiritual guidance
-------------------
-
-Development Seed Team
+Will White
+Robert Soden
 Jürgen Fischer
 Josh Livni
 Michal Migurksi

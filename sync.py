@@ -783,7 +783,7 @@ class LayerAdaptor(object):
         # goal is to support most all datasources, so hopefully we can remove this soon
         # with format specific errors where there exist incompatibilities
         if INCOMPATIBLE_LAYER_WARNING:
-            self.message('You will see this warning once per session... Quantumnik does not currently support "%s" datasources. You will need to uncheck any unsupported layers before rendering with Quantumnik otherwise the resulting map will be blank. File an issue at http://bitbucket.org/springmeyer/quantumnik/issues/ if you would like to request support for this format...' % self.provider)
+            self.message('You will see this warning once per session... Quantumnik does not currently support "%s" datasources. You will need to uncheck any unsupported layers before rendering with Quantumnik otherwise the resulting map will be blank. File an issue at https://github.com/springmeyer/quantumnik if you would like to request support for this format...' % self.provider)
             INCOMPATIBLE_LAYER_WARNING = False
     
     @property
