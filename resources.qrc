@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/" >
+        <file>mapnikglobe.png</file>
+        <file>mapnikhelp.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,10 @@
+# For release:
+# change versions in __init__.py and on distribution site...
+# remove '-dev' from name
+# update CHANGELOG
+# commit changes
+# tag with mercurial
+# $ hg tag -m "tagging the <version> release" <version>
+cd ../
+rm quantumnik.zip
+zip -9vr quantumnik.zip quantumnik/*

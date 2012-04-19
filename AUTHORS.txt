@@ -1,0 +1,27 @@
+Authors
+-------
+
+Dane Springmeyer <dbsgeo - at - gmail.com>
+Aaron Racicot <aaronr - at - z-pulley.com>
+
+
+Testing and Patches
+-------------------
+
+Alex Mandel
+Bob Moskovitz
+Tim Sinnott
+Tim Sutton
+Ahmed Dassouki
+Tyler Mitchell
+
+
+Spiritual guidance
+------------------
+
+Development Seed Team
+Jürgen Fischer
+Josh Livni
+Michal Migurksi
+Artem Pavlenko
+Gary Sherman

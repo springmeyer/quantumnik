@@ -1,0 +1,266 @@
+Quantumnik Changelog
+--------------------
+
+Version 0.4.1, June 29, 2011:
+-----------------------------
+
+ * Improved handling of user/custom projections
+
+
+Version 0.4.0, June 29, 2011:
+-----------------------------
+
+ * Upgrade to QGIS 1.7.0 and latest Mapnik2 (svn r2996)
+
+
+Version 0.3.9, Feb 18, 2011:
+----------------------------
+
+ * Fix display on windows broken in 0.3.8
+
+
+Version 0.3.8, Nov 27, 2010:
+----------------------------
+
+ * Added support for Cascadenik 1.x
+
+ * Avoided redundant creation of datasources, speeding up conversion from QGIS
+   canvas to a mapnik.Map
+
+ * Fixed bug with reading shapefiles in a directory by dispatching to ogr
+
+ * Speedup rendering by writing mapnik.Image string directly to QImage
+
+
+Version 0.3.7, May 1, 2010:
+---------------------------
+
+ * Support for GPX layers through OGR provider
+
+
+Version 0.3.6, April 15th, 2010:
+--------------------------------
+
+ * Maintain support for Mapnik trunk, now using `mapnik2` namespace
+ * Upgrading Qt signals - http://trac.osgeo.org/qgis/ticket/1743
+ * Dropped use of line numbers when using pygments syntax highlighting
+
+
+Version 0.3.5, March 9th, 2010:
+-------------------------------
+
+ * Better support for attribute-scaled point symbols (requires Mapnik >=0.8.0)
+ * Added support for using images as polygon fill (QGIS custom texture --> Mapnik
+   PolygonPatternSymbolizer)
+ * Fixed support for hollow fill point symbols
+
+
+Version 0.3.4, February 3rd, 2010:
+----------------------------------
+
+ * Better support for the QGIS OpenStreetMap Plugin by rendering from sqlite db
+
+
+Version 0.3.3, February 2nd, 2010:
+----------------------------------
+
+ * Added beta support for rendering of .osm files loaded in QGIS
+ * Added support for Mapnik 0.8.0-dev (working trunk)
+ * Improved support for loading Cascadenik files
+ * Fixed regression in support for graduated symbols
+ * Added support for pointz and multipoint shapefiles through Mapnik OGR plugin
+ 
+ 
+Version 0.3.2, January 12th, 2010:
+----------------------------------
+
+ * Fixed regression in labeling from 0.3.1
+ 
+
+Version 0.3.1, January 12th, 2010:
+----------------------------------
+
+ * Better support for loading existing XML/MML and live editing.
+ * Added support for better writing of cairo formats and polygon gamma correction
+   available in upcoming Mapnik 0.7.0 release.
+ * Added support for Mapnik2 (trunk).
+ * Improved default display of dashed outlines on polygons.
+ * Improved default of text label vertical alignment (to support Mapnik 0.7.0).
+
+
+Version 0.3.0, December 17th, 2009:
+-----------------------------------
+
+ * Implemented new aggregate styles approach as progress toward zoom-dependent styles.
+   - http://bitbucket.org/springmeyer/quantumnik/issue/8/
+   - new minor version as this change greatly re-worked the approach for understanding
+     and creating Mapnik layers from QGIS layers.
+ 
+ * Fixed a few bugs with rasters and projections from 0.2.7 and 0.2.8
+
+
+Version 0.2.8, December 12th, 2009:
+-----------------------------------
+
+ * Repaired support for using custom postgres schemas.
+
+
+Version 0.2.7, December 11th, 2009:
+-----------------------------------
+
+ * Ensured that relative paths to point symbols and file datasources are used
+   when exporting to XML.
+ * Made the layer name and projection xml output more concise.
+
+
+Version 0.2.6, December 9th, 2009:
+----------------------------------
+
+ * Fixed bug with handling of duplicate styles/layers
+ * Proper assignment of 'min_distance' and 'spacing' parameters for TextSymbolizer
+   - Should result in few duplicate road names on linear features
+ * Allow for live viewing of XML that was loaded from Mapnik xml or Cascadenik mml 
+ * Better error messages for windows users
+ 
+
+Version 0.2.5, November 30th, 2009:
+-----------------------------------
+
+ * For now, skip Symbology-NG layers that QGIS trunk (soon to be 1.4) supports 
+ 
+ 
+Version 0.2.4, November 30th, 2009:
+-----------------------------------
+
+ * Turned off layer queryability for faster rendering
+ * Added handling of text halo color (QGIS calls label "buffer")
+ * Fixed rare case of potential zero division error in continuous color renderer
+ * Added ability to read in multipoint shapefiles using OGR plugin
+ * Fixed bug in imageexport.
+
+
+Version 0.2.3, November 13th, 2009:
+-----------------------------------
+
+ * Restore compatibility with QGIS 1.0.x
+   - Keyboard shortcuts not possible before 1.2
+
+
+Version 0.2.2, November 10th, 2009:
+-----------------------------------
+
+ * Various bugfixes
+
+
+Version 0.2.1, November 10th, 2009:
+-----------------------------------
+
+ * Added tabbed layout for QGIS/Mapnik maps (racicot)
+ * Added keyboard shortcuts to switch between tabs
+   - Ctrl-[ to switch to QGIS
+   - Ctrl-] to switch to Mapnik
+ * Added support for reloading XML or MML rendered in QGIS
+   - Clicking main icon will reload
+   - Ctrl-R (Apple-R on osx) will also reload
+   - This makes live editing XML in a separate editor easier
+ * Added syntax highlighting to XML viewer via pygements (if installed)
+   
+
+Version 0.2.0, October 7st, 2009:
+---------------------------------
+
+ * Tagged from r93
+ * Improved support for PostGIS schemas
+ * Improved support for continuous color renderer when using PostGIS float8 data types
+ * Restored support for QGIS 1.x series (broken in 0.1.9)
+
+
+Version 0.1.9, October 1st, 2009:
+---------------------------------
+
+ * Tagged from r85
+ * Fixed scaling of image symbols
+ 
+
+Version 0.1.8, September 28, 2009:
+----------------------------------
+
+ * Tagged from r80
+ * Repaired broken support for on-the-fly reprojection
+ * Remove projection warning when only one layer is being used 
+   and the qgis map<->layer srs differs without using on-the-fly reprojection
+
+
+Version 0.1.7, August 17 2009:
+------------------------------
+ 
+ * Tagged from r76
+ * Added more friendly message for unsupported formats.
+ * Added draft (but currently disable) support for WMS layers.
+ * Added support for Grass Vectors through OGR.
+ * Added support for the QGIS SpatialLite Provider.
+
+Version 0.1.6, August 13, 2009:
+-------------------------------
+ 
+ * Tagged from r66
+ * Special thanks to cgs_bob for excellent testing and reports. 
+ * Added better cross-platform support for file paths (Issue #16)
+ * Added preliminary support for handling e00/arc adf files through OGR driver.
+ * Added workaround for when the QGIS map srs does not match the layer srs (http://trac.osgeo.org/qgis/ticket/1688) by assuming equality. 
+ * Added ability to view live Mapnik XML in a dockable window (The plan longer term is for this to be editable).
+ * Reworked and improved the 'Image Export' functionality, including rendering to a temporary file, writing to Cairo supported PS, PDF, and SVG formats, and controlling the background transparency (Printing option still not implemented)
+ * Improved creation of Mapnik filters based on better handling of QGIS field types (Issue #13)
+ * Improved handling of OGR datasources  
+ 
+   
+Version 0.1.5, June 7, 2009:
+----------------------------
+ * Tagged from r44
+ * Better QVariant handling
+ * Added label based scale-visibility
+ * Improved support for continuous color gradients
+ * Added support for unique values symbolization on float values
+
+
+Version 0.1.4, June 4, 2009:
+----------------------------
+ * Packaged from r41
+ * Minor Bugfixes
+
+
+Version 0.1.3, June 4, 2009:
+----------------------------
+ * Packaged from r40
+ * Add proper support for OGR datasources (r32)
+ * Add support for Mapnik 0.5.x for vector layers (r31)
+ * Add rudimentary support for continuous color gradients (r31)
+ * Add support for PostGIS custom ports/host/pass/schema/sql (r28,r29,r30)
+ * Add support for handling active layers individually, to control rendering by Qgis and Mapnik independently (r26,r36,r37)
+
+
+Version 0.1.2, May 25, 2009:
+----------------------------
+ * Use y-axis text displacement by default for labels along lines from migurski (r25)
+ * Add support for dash-arrays (r24)
+ * Add support for subtle line cap/join/pen/brush translation (r23)
+
+
+Version 0.1.1, May 15, 2009:
+----------------------------
+ * Added rudimentary support for point symbolization using PNGs exported from QGIS (r20)
+ * Added support for Rasters and min/max visibility for layers (r19)
+ * Added warning when projections are not properly set in QGIS (r18)
+ * Added support for PointSymbolizer displacement
+ * Better handling of QString unicode -> string conversion for Filters
+
+
+Version 0.1.0, May 1, 2009:
+---------------------------
+
+ * First release of plugin
+ * Two classes compose main plugin and Qgis->Mapnik interface
+ * Support for reading of XML/MML and writing of XML
+ * Support for Shapefiles and PostGIS
+ * Support for dynamic rendering on QGIS MapCanvas
+ * Support for unique values and single symbolization

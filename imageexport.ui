@@ -1,0 +1,421 @@
+<ui version="4.0" >
+ <author>Dane Springmeyer</author>
+ <class>ImageExport</class>
+ <widget class="QDialog" name="ImageExport" >
+  <property name="windowModality" >
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="enabled" >
+   <bool>true</bool>
+  </property>
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>356</width>
+    <height>386</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy" >
+   <enum>Qt::NoContextMenu</enum>
+  </property>
+  <property name="windowTitle" >
+   <string>Quantumnik - Image Export</string>
+  </property>
+  <property name="sizeGripEnabled" >
+   <bool>true</bool>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox" >
+   <property name="geometry" >
+    <rect>
+     <x>5</x>
+     <y>345</y>
+     <width>334</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="sizePolicy" >
+    <sizepolicy vsizetype="Fixed" hsizetype="Fixed" >
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="font" >
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="standardButtons" >
+    <set>QDialogButtonBox::Close|QDialogButtonBox::Save</set>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBox" >
+   <property name="geometry" >
+    <rect>
+     <x>19</x>
+     <y>6</y>
+     <width>313</width>
+     <height>154</height>
+    </rect>
+   </property>
+   <property name="sizePolicy" >
+    <sizepolicy vsizetype="Preferred" hsizetype="Expanding" >
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="font" >
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="title" >
+    <string>Image Output</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout" >
+    <item row="0" column="0" colspan="2" >
+     <widget class="QLineEdit" name="image_output_path" >
+      <property name="font" >
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="toolTip" >
+       <string>Name for the map file to be created from the QGIS project file</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2" >
+     <widget class="QPushButton" name="image_output_button" >
+      <property name="font" >
+       <font>
+        <pointsize>10</pointsize>
+        <weight>50</weight>
+        <bold>false</bold>
+        <stylestrategy>PreferAntialias</stylestrategy>
+       </font>
+      </property>
+      <property name="focusPolicy" >
+       <enum>Qt::TabFocus</enum>
+      </property>
+      <property name="text" >
+       <string>Save As...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="3" >
+     <layout class="QHBoxLayout" name="horizontalLayout" >
+      <item>
+       <widget class="QLabel" name="textLabel4_2" >
+        <property name="font" >
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string>Resolution:</string>
+        </property>
+        <property name="alignment" >
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+        <property name="buddy" >
+         <cstring>format</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="resolution" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Fixed" hsizetype="Minimum" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize" >
+         <size>
+          <width>50</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="font" >
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="autoFillBackground" >
+         <bool>false</bool>
+        </property>
+        <property name="text" >
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="textLabel4_3" >
+        <property name="font" >
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string>(ppi)</string>
+        </property>
+        <property name="alignment" >
+         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+        </property>
+        <property name="buddy" >
+         <cstring>format</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="textLabel4" >
+        <property name="font" >
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="text" >
+         <string>Format:</string>
+        </property>
+        <property name="alignment" >
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+        <property name="buddy" >
+         <cstring>format</cstring>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="format" >
+        <property name="font" >
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <item>
+         <property name="text" >
+          <string>png</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>jpeg</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>pdf</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>svg</string>
+         </property>
+        </item>
+        <item>
+         <property name="text" >
+          <string>ps</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0" >
+     <widget class="QCheckBox" name="tmp_render" >
+      <property name="font" >
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text" >
+       <string>Render to tmp file...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1" colspan="2" >
+     <widget class="QCheckBox" name="auto_open" >
+      <property name="enabled" >
+       <bool>true</bool>
+      </property>
+      <property name="font" >
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text" >
+       <string>Open after save...</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="3" >
+     <widget class="QCheckBox" name="transparent_background" >
+      <property name="font" >
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text" >
+       <string>Transparent Background</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="grpMap" >
+   <property name="geometry" >
+    <rect>
+     <x>20</x>
+     <y>175</y>
+     <width>316</width>
+     <height>156</height>
+    </rect>
+   </property>
+   <property name="sizePolicy" >
+    <sizepolicy vsizetype="Preferred" hsizetype="Expanding" >
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="font" >
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="title" >
+    <string>Print Options (Not Yet Enabled)</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2" >
+    <item row="0" column="0" >
+     <widget class="QLabel" name="label" >
+      <property name="enabled" >
+       <bool>false</bool>
+      </property>
+      <property name="font" >
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text" >
+       <string>Custom Size:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1" colspan="2" >
+     <widget class="QComboBox" name="sizes" >
+      <property name="enabled" >
+       <bool>true</bool>
+      </property>
+      <property name="font" >
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="2" >
+     <widget class="QCheckBox" name="neatline" >
+      <property name="enabled" >
+       <bool>false</bool>
+      </property>
+      <property name="font" >
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text" >
+       <string>Draw Neatline</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2" >
+     <widget class="QComboBox" name="comboBox" >
+      <property name="enabled" >
+       <bool>false</bool>
+      </property>
+      <property name="font" >
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <item>
+       <property name="text" >
+        <string>Landscape</string>
+       </property>
+      </item>
+      <item>
+       <property name="text" >
+        <string>Portrait</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="2" >
+     <widget class="QLabel" name="label_2" >
+      <property name="enabled" >
+       <bool>false</bool>
+      </property>
+      <property name="font" >
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text" >
+       <string>Text Override:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="3" >
+     <widget class="QFontComboBox" name="fontComboBox" >
+      <property name="enabled" >
+       <bool>false</bool>
+      </property>
+      <property name="font" >
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11" />
+ <pixmapfunction>qPixmapFromMimeSource</pixmapfunction>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>ImageExport</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>335</x>
+     <y>422</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>240</x>
+     <y>223</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>ImageExport</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>426</x>
+     <y>422</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>240</x>
+     <y>223</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

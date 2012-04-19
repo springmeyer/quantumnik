@@ -1,0 +1,5 @@
+make clean
+make
+sudo make install
+#open -a qgis
+#/Applications/Qgis.app/Contents/MacOS/Qgis
