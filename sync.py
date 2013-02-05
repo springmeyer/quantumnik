@@ -745,7 +745,7 @@ class LayerAdaptor(object):
                     # nope, we have no way to get the table name...
                     #return self.rasterlite()
                     pass
-            if not self.layer.usesProvider():
+            if not self.layer.providerType() == 'gdal':
                 # grass rasters and some tif's do not have a provider method!
                 # others?
                 # TODO - needs testing
