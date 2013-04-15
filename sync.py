@@ -236,8 +236,8 @@ class RasterRules(object):
             r.max_scale = max_scale
         raster = mapnik.RasterSymbolizer()
         raster.opacity = self.opacity
-        raster.scaling = 'bilinear'
-        raster.mode = 'normal'
+        #raster.scaling = 'bilinear'
+        #raster.mode = 'normal'
         r.symbols.append(raster)
         r_list.append(r)
         return r_list

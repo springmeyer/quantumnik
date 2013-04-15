@@ -12,13 +12,16 @@ def version():
   return "Version 0.4.1"
 
 def qgisMinimumVersion():
-  return "1.0.0" # Kore, ideally 1.1.0 (Pan)
+  return "1.8" # Kore, ideally 1.1.0 (Pan)
 
-def authorName():
-  return "Dane Springmeyer (dane@dbsgeo.com)"
+def author():
+  return "Dane Springmeyer"
+
+def email():
+  return "dane@dbsgeo.com"
 
 def homepage():
-  return "http://bitbucket.org/springmeyer/quantumnik/"
+  return "https://github.com/springmeyer/quantumnik"
 
 def classFactory(iface):
   return Quantumnik(iface)

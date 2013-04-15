@@ -1,0 +1,15 @@
+[general]
+name=quantumnik
+qgisMinimumVersion=1.8
+description=Mapnik integration with QGIS
+version=0.4.1
+author=Dane Springmeyer
+email=dane@dbsgeo.com
+; optional below
+experimental=False
+changelog=TODO
+tags=mapnik,rendering,tiles
+homepage=https://github.com/springmeyer/quantumnik
+tracker=https://github.com/springmeyer/quantumnik/issues
+repository=https://github.com/springmeyer/quantumnik
+icon=mapnikglobe.png
