@@ -55,7 +55,7 @@ class Quantumnik(QObject):
         self.iface = iface
         self.canvas = iface.mapCanvas()
 
-        # Fake canvas to use in tab to overlay the quantimnik layer
+        # Fake canvas to use in tab to overlay the quantumnik layer
         self.qCanvas = None
         self.qCanvasPan = None
         self.qCanvasZoomIn = None
