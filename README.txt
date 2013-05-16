@@ -1,6 +1,6 @@
 Quantumnik
 ----------
 
-Plugin repository is at:
+Plugin download is available within QGIS and at:
 
-  http://qgis.dbsgeo.com/
+  http://plugins.qgis.org/plugins/quantumnik/
